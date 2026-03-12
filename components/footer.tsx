@@ -50,7 +50,7 @@ export function Footer() {
                 className="flex items-center gap-2 text-gray-500 hover:text-white transition-colors text-sm"
               >
                 <Instagram size={16} />
-                Instagram
+                Follow on Instagram
               </a>
               <a
                 href="mailto:hello@studio.com"
@@ -66,7 +66,7 @@ export function Footer() {
         {/* Divider */}
         <div className="border-t border-gray-800 pt-8">
           <p className="text-center text-gray-500 text-sm">
-            &copy; {currentYear} Photography Studio. All rights reserved.
+            &copy; {currentYear} KCAPTURES. All rights reserved.
           </p>
         </div>
       </div>

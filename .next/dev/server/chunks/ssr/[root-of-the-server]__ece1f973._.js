@@ -110,25 +110,61 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$theme$2d$provi
 ;
 ;
 const metadata = {
-    title: 'Photography Studio | Lifestyle & Studio Photography',
-    description: 'Professional photography services specializing in lifestyle and studio portraits. Authentic moments captured beautifully.',
-    generator: 'v0.app',
+    title: 'KCAPTURED - Professional Photography | Lifestyle & Studio',
+    description: 'Premium photography services specializing in authentic lifestyle and professional studio portraits. Capturing beautiful moments that tell your story.',
+    keywords: [
+        'photography',
+        'lifestyle photography',
+        'studio photography',
+        'professional portraits',
+        'photographer'
+    ],
+    authors: [
+        {
+            name: 'KCAPTURED'
+        }
+    ],
+    creator: 'KCAPTURED',
+    publisher: 'KCAPTURED',
+    viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
+    themeColor: [
+        {
+            media: '(prefers-color-scheme: light)',
+            color: 'white'
+        },
+        {
+            media: '(prefers-color-scheme: dark)',
+            color: 'black'
+        }
+    ],
     icons: {
-        icon: [
+        icon: '/favicon.ico',
+        apple: '/apple-icon.png',
+        shortcut: '/favicon.ico'
+    },
+    openGraph: {
+        title: 'KCAPTURED - Professional Photography',
+        description: 'Premium lifestyle and studio photography services',
+        url: 'https://kcaptured.com',
+        siteName: 'KCAPTURED',
+        type: 'website',
+        images: [
             {
-                url: '/icon-light-32x32.png',
-                media: '(prefers-color-scheme: light)'
-            },
-            {
-                url: '/icon-dark-32x32.png',
-                media: '(prefers-color-scheme: dark)'
-            },
-            {
-                url: '/icon.svg',
-                type: 'image/svg+xml'
+                url: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348310/35-2W1A0773__2_jjv1ug.jpg',
+                width: 1200,
+                height: 630,
+                alt: 'KCAPTURED Photography'
             }
-        ],
-        apple: '/apple-icon.png'
+        ]
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'KCAPTURED - Professional Photography',
+        description: 'Premium lifestyle and studio photography services',
+        creator: '@kcaptured',
+        images: [
+            'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348310/35-2W1A0773__2_jjv1ug.jpg'
+        ]
     }
 };
 function RootLayout({ children }) {
@@ -136,7 +172,7 @@ function RootLayout({ children }) {
         lang: "en",
         suppressHydrationWarning: true,
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("body", {
-            className: "font-sans antialiased bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-50",
+            className: "font-sans antialiased bg-white dark:bg-black text-gray-900 dark:text-white",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$theme$2d$provider$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ThemeProvider"], {
                 attribute: "class",
                 defaultTheme: "system",
@@ -145,23 +181,23 @@ function RootLayout({ children }) {
                     children,
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$vercel$2f$analytics$2f$dist$2f$next$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Analytics"], {}, void 0, false, {
                         fileName: "[project]/app/layout.tsx",
-                        lineNumber: 43,
+                        lineNumber: 61,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/layout.tsx",
-                lineNumber: 41,
+                lineNumber: 59,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/app/layout.tsx",
-            lineNumber: 40,
+            lineNumber: 58,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/layout.tsx",
-        lineNumber: 39,
+        lineNumber: 57,
         columnNumber: 5
     }, this);
 }

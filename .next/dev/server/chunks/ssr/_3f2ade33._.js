@@ -37,7 +37,7 @@ function ThemeToggle() {
         "aria-label": "Toggle theme",
         children: theme === 'dark' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sun$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Sun$3e$__["Sun"], {
             size: 20,
-            className: "text-grey-500"
+            className: "text-yellow-500"
         }, void 0, false, {
             fileName: "[project]/components/theme-toggle.tsx",
             lineNumber: 26,
@@ -103,14 +103,14 @@ function Header() {
         }
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
-        className: "sticky top-0 z-50 bg-white/95 dark:bg-gray-950/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800",
+        className: "sticky top-0 z-50 bg-white/95 dark:bg-black/95 backdrop-blur-sm border-b border-gray-300 dark:border-gray-800",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
             className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                     href: "/",
-                    className: "text-2xl font-bold text-gray-900 dark:text-white",
-                    children: "Studio"
+                    className: "text-2xl font-bold text-black dark:text-white",
+                    children: "KCAPTURED"
                 }, void 0, false, {
                     fileName: "[project]/components/header.tsx",
                     lineNumber: 24,
@@ -120,7 +120,7 @@ function Header() {
                     className: "hidden md:flex items-center gap-8",
                     children: navLinks.map((link)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                             href: link.href,
-                            className: "text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium",
+                            className: "text-gray-700 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-sm font-medium",
                             children: link.label
                         }, link.href, false, {
                             fileName: "[project]/components/header.tsx",
@@ -142,7 +142,7 @@ function Header() {
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             onClick: ()=>setIsOpen(!isOpen),
-                            className: "md:hidden p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors",
+                            className: "md:hidden p-2 hover:bg-gray-200 dark:hover:bg-gray-800 rounded-lg transition-colors",
                             "aria-label": "Toggle menu",
                             children: isOpen ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
                                 size: 24
@@ -184,12 +184,12 @@ function Header() {
                     transition: {
                         duration: 0.2
                     },
-                    className: "absolute top-full left-0 right-0 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 md:hidden",
+                    className: "absolute top-full left-0 right-0 bg-white dark:bg-black border-b border-gray-300 dark:border-gray-800 md:hidden",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex flex-col p-4 gap-4",
                         children: navLinks.map((link)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                 href: link.href,
-                                className: "text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors font-medium",
+                                className: "text-gray-700 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors font-medium",
                                 onClick: ()=>setIsOpen(false),
                                 children: link.label
                             }, link.href, false, {
@@ -228,55 +228,247 @@ __turbopack_context__.s([
     ()=>portfolioImages
 ]);
 const portfolioImages = [
-    // REPLACE WITH YOUR CLOUDINARY URLS
-    // Format: https://res.cloudinary.com/YOUR_CLOUD_NAME/image/upload/v1234567890/your-image-name.jpg
+    // LIFESTYLE IMAGES
     {
-        id: '1',
-        cloudinaryUrl: 'https://via.placeholder.com/300x400',
+        id: 'lifestyle-1',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348315/37-2W1A1536__2_boppo7.jpg',
         category: 'lifestyle',
-        title: 'Portrait',
-        width: 300,
-        height: 400
-    },
-    {
-        id: '2',
-        cloudinaryUrl: 'https://via.placeholder.com/400x300',
-        category: 'lifestyle',
-        title: 'Lifestyle Shot',
+        title: 'Sunset Portrait',
         width: 400,
-        height: 300
+        height: 600
     },
     {
-        id: '3',
-        cloudinaryUrl: 'https://via.placeholder.com/350x450',
-        category: 'studio',
-        title: 'Studio Session',
-        width: 350,
-        height: 450
-    },
-    {
-        id: '4',
-        cloudinaryUrl: 'https://via.placeholder.com/400x400',
-        category: 'studio',
-        title: 'Studio Portrait',
-        width: 400,
-        height: 400
-    },
-    {
-        id: '5',
-        cloudinaryUrl: 'https://via.placeholder.com/300x500',
+        id: 'lifestyle-2',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348312/38-2W1A1630__2_hiatzs.jpg',
         category: 'lifestyle',
-        title: 'Nature Shot',
-        width: 300,
+        title: 'Golden Hour',
+        width: 400,
+        height: 600
+    },
+    {
+        id: 'lifestyle-3',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348310/30-2W1A1491__2_ptkhsh.jpg',
+        category: 'lifestyle',
+        title: 'Natural Light Portrait',
+        width: 400,
+        height: 600
+    },
+    {
+        id: 'lifestyle-4',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348310/35-2W1A0773__2_jjv1ug.jpg',
+        category: 'lifestyle',
+        title: 'Outdoor Session',
+        width: 400,
+        height: 600
+    },
+    {
+        id: 'lifestyle-5',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348309/34-2W1A1546__2_xcadpy.jpg',
+        category: 'lifestyle',
+        title: 'Candid Moment',
+        width: 400,
+        height: 600
+    },
+    {
+        id: 'lifestyle-6',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348309/31-2W1A1508__2_u6qvjw.jpg',
+        category: 'lifestyle',
+        title: 'Portrait Series',
+        width: 400,
+        height: 600
+    },
+    {
+        id: 'lifestyle-7',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348309/36-2W1A1501__2_tqgyyb.jpg',
+        category: 'lifestyle',
+        title: 'Life Moments',
+        width: 400,
+        height: 600
+    },
+    {
+        id: 'lifestyle-8',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348307/32-2W1A1679__2_fmrnxk.jpg',
+        category: 'lifestyle',
+        title: 'Authentic Connection',
+        width: 400,
+        height: 600
+    },
+    {
+        id: 'lifestyle-9',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348304/29-2W1A1550__2_wtdcu1.jpg',
+        category: 'lifestyle',
+        title: 'Lifestyle Shoot',
+        width: 400,
+        height: 600
+    },
+    {
+        id: 'lifestyle-10',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348303/22-2W1A1327__2_yxnuhj.jpg',
+        category: 'lifestyle',
+        title: 'Natural Setting',
+        width: 400,
+        height: 600
+    },
+    {
+        id: 'lifestyle-11',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348301/28-2W1A1291__2_qff0ni.jpg',
+        category: 'lifestyle',
+        title: 'Portrait Study',
+        width: 400,
+        height: 600
+    },
+    {
+        id: 'lifestyle-12',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348301/12-2W1A1211__2_xnbin8.jpg',
+        category: 'lifestyle',
+        title: 'Character Portrait',
+        width: 400,
+        height: 600
+    },
+    {
+        id: 'lifestyle-13',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348299/27-2W1A1345__2_laymtv.jpg',
+        category: 'lifestyle',
+        title: 'Lifestyle Series',
+        width: 400,
+        height: 600
+    },
+    {
+        id: 'lifestyle-14',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348296/26-2W1A1339__2_mpsvlk.jpg',
+        category: 'lifestyle',
+        title: 'Outdoor Portrait',
+        width: 400,
+        height: 600
+    },
+    {
+        id: 'lifestyle-15',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348296/14-2W1A1193__2_qkmsj8.jpg',
+        category: 'lifestyle',
+        title: 'Expressive Shot',
+        width: 400,
+        height: 600
+    },
+    {
+        id: 'lifestyle-16',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348294/21-2W1A1311__2_yckitd.jpg',
+        category: 'lifestyle',
+        title: 'Genuine Moment',
+        width: 400,
+        height: 600
+    },
+    {
+        id: 'lifestyle-17',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348291/18-2W1A0556__2_gn514k.jpg',
+        category: 'lifestyle',
+        title: 'Connection Series',
+        width: 400,
+        height: 600
+    },
+    {
+        id: 'lifestyle-18',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348288/11-2W1A1224__2_poaitf.jpg',
+        category: 'lifestyle',
+        title: 'Moment Captured',
+        width: 400,
+        height: 600
+    },
+    {
+        id: 'lifestyle-19',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348290/13-2W1A1234__2_c6wzzc.jpg',
+        category: 'lifestyle',
+        title: 'Portrait Details',
+        width: 400,
+        height: 600
+    },
+    {
+        id: 'lifestyle-20',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348284/16-2W1A9157_cuksia.jpg',
+        category: 'lifestyle',
+        title: 'Lifestyle Moments',
+        width: 400,
+        height: 600
+    },
+    {
+        id: 'lifestyle-21',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348283/10-2W1A1215__2_cq0new.jpg',
+        category: 'lifestyle',
+        title: 'Natural Beauty',
+        width: 400,
+        height: 600
+    },
+    {
+        id: 'lifestyle-22',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348280/9-2W1A1213__2_zj5uan.jpg',
+        category: 'lifestyle',
+        title: 'Authentic Capture',
+        width: 400,
+        height: 600
+    },
+    // STUDIO IMAGES
+    {
+        id: 'studio-1',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348278/8-2W1A1201__2_xnxm8w.jpg',
+        category: 'studio',
+        title: 'Studio Headshot',
+        width: 400,
         height: 500
     },
     {
-        id: '6',
-        cloudinaryUrl: 'https://via.placeholder.com/450x350',
+        id: 'studio-2',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348276/7-2W1A1195__2_e2vfwi.jpg',
+        category: 'studio',
+        title: 'Professional Portrait',
+        width: 400,
+        height: 500
+    },
+    {
+        id: 'studio-3',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348275/6-2W1A1161__2_aqj2ss.jpg',
+        category: 'studio',
+        title: 'Studio Session',
+        width: 400,
+        height: 500
+    },
+    {
+        id: 'studio-4',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348273/5-2W1A1111__2_hq01c0.jpg',
+        category: 'studio',
+        title: 'Professional Lighting',
+        width: 400,
+        height: 500
+    },
+    {
+        id: 'studio-5',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348269/4-2W1A0970__2_gsmxhk.jpg',
+        category: 'studio',
+        title: 'Clean Studio Shot',
+        width: 400,
+        height: 500
+    },
+    {
+        id: 'studio-6',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348267/3-2W1A0937__2_oqwnpr.jpg',
+        category: 'studio',
+        title: 'Studio Portrait',
+        width: 400,
+        height: 500
+    },
+    {
+        id: 'studio-7',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348265/2-2W1A0854__2_yvajef.jpg',
         category: 'studio',
         title: 'Professional Headshot',
-        width: 450,
-        height: 350
+        width: 400,
+        height: 500
+    },
+    {
+        id: 'studio-8',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348262/1-2W1A0805__2_n2xnti.jpg',
+        category: 'studio',
+        title: 'Studio Excellence',
+        width: 400,
+        height: 500
     }
 ];
 }),
@@ -329,7 +521,7 @@ function MasonryGallery() {
                         whileTap: {
                             scale: 0.95
                         },
-                        className: `px-6 py-2 rounded-lg font-medium transition-all ${selectedCategory === cat.value ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900' : 'bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700'}`,
+                        className: `px-6 py-2 rounded-lg font-medium transition-all ${selectedCategory === cat.value ? 'bg-black dark:bg-white text-white dark:text-black' : 'bg-gray-200 dark:bg-gray-800 text-black dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700'}`,
                         children: cat.label
                     }, cat.value, false, {
                         fileName: "[project]/components/masonry-gallery.tsx",
@@ -345,6 +537,7 @@ function MasonryGallery() {
                 layout: true,
                 className: "columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-4",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
+                    mode: "popLayout",
                     children: filteredImages.map((image)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
                             layout: true,
                             initial: {
@@ -364,44 +557,34 @@ function MasonryGallery() {
                             },
                             className: "break-inside-avoid mb-4 cursor-pointer group overflow-hidden rounded-lg",
                             onClick: ()=>setSelectedImage(image),
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "relative bg-gray-200 dark:bg-gray-700 overflow-hidden rounded-lg",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                            src: image.cloudinaryUrl,
-                                            alt: image.title,
-                                            width: image.width,
-                                            height: image.height,
-                                            className: "w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/masonry-gallery.tsx",
-                                            lineNumber: 63,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/masonry-gallery.tsx",
-                                            lineNumber: 70,
-                                            columnNumber: 17
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/components/masonry-gallery.tsx",
-                                    lineNumber: 62,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "mt-2 text-sm font-medium text-gray-700 dark:text-gray-300",
-                                    children: image.title
-                                }, void 0, false, {
-                                    fileName: "[project]/components/masonry-gallery.tsx",
-                                    lineNumber: 72,
-                                    columnNumber: 15
-                                }, this)
-                            ]
-                        }, image.id, true, {
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "relative bg-gray-200 dark:bg-gray-700 overflow-hidden rounded-lg",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                        src: image.cloudinaryUrl,
+                                        alt: image.title,
+                                        width: image.width,
+                                        height: image.height,
+                                        className: "w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/masonry-gallery.tsx",
+                                        lineNumber: 63,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/masonry-gallery.tsx",
+                                        lineNumber: 70,
+                                        columnNumber: 17
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/masonry-gallery.tsx",
+                                lineNumber: 62,
+                                columnNumber: 15
+                            }, this)
+                        }, image.id, false, {
                             fileName: "[project]/components/masonry-gallery.tsx",
                             lineNumber: 52,
                             columnNumber: 13
@@ -465,12 +648,12 @@ function MasonryGallery() {
                                     size: 32
                                 }, void 0, false, {
                                     fileName: "[project]/components/masonry-gallery.tsx",
-                                    lineNumber: 105,
+                                    lineNumber: 104,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/masonry-gallery.tsx",
-                                lineNumber: 98,
+                                lineNumber: 97,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -479,7 +662,7 @@ function MasonryGallery() {
                                 className: "w-full h-auto rounded-lg"
                             }, void 0, false, {
                                 fileName: "[project]/components/masonry-gallery.tsx",
-                                lineNumber: 109,
+                                lineNumber: 108,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -501,7 +684,7 @@ function MasonryGallery() {
                                         children: selectedImage.title
                                     }, void 0, false, {
                                         fileName: "[project]/components/masonry-gallery.tsx",
-                                        lineNumber: 122,
+                                        lineNumber: 121,
                                         columnNumber: 17
                                     }, this),
                                     selectedImage.description && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -509,7 +692,7 @@ function MasonryGallery() {
                                         children: selectedImage.description
                                     }, void 0, false, {
                                         fileName: "[project]/components/masonry-gallery.tsx",
-                                        lineNumber: 124,
+                                        lineNumber: 123,
                                         columnNumber: 19
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -517,29 +700,29 @@ function MasonryGallery() {
                                         children: selectedImage.category
                                     }, void 0, false, {
                                         fileName: "[project]/components/masonry-gallery.tsx",
-                                        lineNumber: 126,
+                                        lineNumber: 125,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/masonry-gallery.tsx",
-                                lineNumber: 116,
+                                lineNumber: 115,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/masonry-gallery.tsx",
-                        lineNumber: 89,
+                        lineNumber: 88,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/masonry-gallery.tsx",
-                    lineNumber: 81,
+                    lineNumber: 80,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/masonry-gallery.tsx",
-                lineNumber: 79,
+                lineNumber: 78,
                 columnNumber: 7
             }, this)
         ]

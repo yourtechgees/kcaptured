@@ -122,11 +122,6 @@ export function ContactForm() {
             </div>
           )}
         </form>
-
-        {/* Note about Formspree */}
-        <p className="text-center text-gray-700 dark:text-gray-400 text-sm mt-8">
-          Replace 'YOUR_FORM_ID' in the form code with your actual Formspree Form ID
-        </p>
       </div>
     </section>
   );
