@@ -24,12 +24,12 @@ All portfolio images and testimonial videos are loaded from Cloudinary, making i
 
 2. **Install dependencies:**
    ```bash
-   pnpm install
+   npm install
    ```
 
 3. **Run the development server:**
    ```bash
-   pnpm dev
+   npm run dev
    ```
 
 4. **Open in browser:**
