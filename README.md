@@ -1,20 +1,43 @@
-# Photography Portfolio Website
+# KCAPTURED - Professional Photography Portfolio
 
-A modern, professional photography portfolio website built with Next.js 15, React 19, and Tailwind CSS. Features a masonry-style gallery, blog, FAQ section, and contact form integration.
+A modern, high-performance photography portfolio website built with Next.js 15, React 19, Tailwind CSS, and Framer Motion. Features a masonry-style gallery, blog, FAQ section, testimonial videos, and contact form integration.
 
-## Overview
+## Features Implemented ✅
 
-This website is designed specifically for lifestyle and studio photographers. It includes:
+### Core Pages
+- ✅ **Homepage** - Hero section with background image, services showcase, testimonials carousel, contact CTA
+- ✅ **Portfolio Gallery** - Pinterest-style masonry layout with category filtering (Lifestyle/Studio)
+- ✅ **Blog** - Listing page and individual article pages with metadata
+- ✅ **FAQ** - Accordion-style questions organized by category
+- ✅ **Contact Form** - Formspree email integration with validation
+- ✅ **Responsive Navigation** - Sticky header with mobile menu and theme toggle
 
-- **Homepage** with hero section, service packages, and client testimonials
-- **Portfolio Gallery** with masonry layout and category filtering
-- **Blog** section for photography tips and insights
-- **FAQ** page with common questions organized by category
-- **Contact Form** integrated with Formspree
-- **Responsive Design** that works on all devices
-- **Data-Driven Architecture** for easy content updates
+### Design & Experience
+- ✅ **Dark/Light Theme** - Automatic system detection with manual toggle
+- ✅ **Smooth Animations** - Framer Motion animations throughout (fade-in, scale, transitions)
+- ✅ **Blurred Background Sections** - Services and testimonials sections feature blurred background images with 75% dark overlay
+- ✅ **Video Testimonials** - Client testimonial videos with proper aspect ratio (aspect-video, 16:9)
+- ✅ **Minimalist Design** - Clean black and white color scheme matching client brand
 
-All portfolio images and testimonial videos are loaded from Cloudinary, making it easy to update your work without code changes.
+### Performance & SEO
+- ✅ **Image Caching** - 365-day cache for Cloudinary images via Next.js Image Optimization
+- ✅ **Metadata** - Comprehensive Open Graph, Twitter Card, and structured data
+- ✅ **Sitemap** - Auto-generated XML sitemap with all pages and blog posts
+- ✅ **Robots.txt** - Search engine crawling configuration
+- ✅ **Response Optimization** - Next.js automatic image optimization with WebP/AVIF formats
+
+## Features To Add (Future Enhancements)
+
+- [ ] Admin Dashboard - Manage content without code changes
+- [ ] Database Integration - Store blog posts, testimonials, and contact submissions
+- [ ] Booking System - Schedule sessions directly from website
+- [ ] Newsletter Signup - Email list collection
+- [ ] Analytics Integration - Track visitor behavior and conversions
+- [ ] Advanced SEO - Schema markup for Organization, LocalBusiness
+- [ ] Multi-language Support - i18n for international clients
+- [ ] Video Gallery Section - Showcase video reels and behind-the-scenes
+- [ ] E-commerce Integration - Sell prints or digital files
+- [ ] Image Search - Advanced filtering and search by tags
 
 ## Getting Started
 
@@ -27,560 +50,336 @@ All portfolio images and testimonial videos are loaded from Cloudinary, making i
    pnpm install
    ```
 
-3. **Run the development server:**
+3. **Set environment variables (optional):**
+   Create `.env.local` file:
+   ```
+   NEXT_PUBLIC_BASE_URL=https://kcaptured.com
+   NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=dq4tkpuu4
+   ```
+
+4. **Run the development server:**
    ```bash
    pnpm dev
    ```
 
-4. **Open in browser:**
+5. **Open in browser:**
    Visit `http://localhost:3000`
 
 ## Configuration
 
-### Cloudinary Setup
+### Branding & Logo Setup
 
-All images and videos are served through Cloudinary. Follow these steps to set it up:
+#### Logo Placement
+1. **Main Logo** - Place logo image at `/public/images/logo.png`
+2. **Update Header** - Edit `components/header.tsx`:
+   ```tsx
+   <Link href="/" className="...">
+     <Image 
+       src="/images/logo.png" 
+       alt="KCAPTURED" 
+       width={180} 
+       height={40}
+     />
+   </Link>
+   ```
 
-1. **Sign up for Cloudinary** at [cloudinary.com](https://cloudinary.com) (free tier available)
+#### Favicon Setup
+1. **Favicon Files** - Add to `/public/`:
+   - `favicon.ico` - Browser tab icon (32x32 or 64x64)
+   - `apple-icon.png` - Apple devices (180x180)
+2. **Already configured** in `app/layout.tsx` metadata
 
-2. **Get your Cloud Name:**
-   - Go to your Cloudinary Dashboard
-   - Copy your "Cloud Name" (you'll need this for all URLs)
+#### Social Media Share Image
+1. **Share Image** - Place at `/public/og-image.png` (1200x630 pixels)
+2. **Update in** `app/layout.tsx` if using different image:
+   ```tsx
+   images: [{
+     url: '/og-image.png',
+     width: 1200,
+     height: 630,
+   }]
+   ```
 
-### Where to Add Media Files
+### Cloudinary Media Management
 
-#### Portfolio/Gallery Images
+All images and videos come from Cloudinary. Your cloud name is: `dq4tkpuu4`
+
+#### Portfolio Images Setup
 **File:** `lib/portfolio-data.ts`
 
-Add or update your portfolio images here. The site will display them in a Pinterest-style masonry layout with filtering by category (Lifestyle or Studio).
+Portfolio images display in a masonry (Pinterest-style) layout on the Portfolio page. Filter buttons allow visitors to view:
+- All Work
+- Lifestyle (casual, natural setting photos)
+- Studio (controlled environment, lit photography)
 
 ```typescript
 {
   id: 'lifestyle-1',
-  cloudinaryUrl: 'https://res.cloudinary.com/YOUR_CLOUD_NAME/image/upload/v1234567890/lifestyle-portrait.jpg',
+  cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348315/FILENAME.jpg',
   category: 'lifestyle',  // or 'studio'
-  title: 'Sunset Portrait Session',
-  description: 'Optional description of the image',
-  width: 300,   // Original image width - important for masonry layout
-  height: 400,  // Original image height - important for masonry layout
+  title: 'Image Title',
+  description: 'Optional description',
+  width: 400,   // Original image width
+  height: 600,  // Original image height
 }
 ```
 
-**Important:** Always provide accurate width/height of your images so the masonry layout calculates proportions correctly.
+**Important:** Accurate width/height values ensure proper masonry layout proportions.
 
-#### Hero/Background Images
-**File:** You can add a hero image URL in `components/hero-section.tsx` by adding a background image style:
-```tsx
-<section className="... bg-cover bg-center" style={{backgroundImage: 'url(YOUR_CLOUDINARY_URL)'}}>
-```
-
-#### Testimonial Videos
+#### Testimonial Videos Setup
 **File:** `lib/testimonials-data.ts`
 
-This section displays video testimonials from your clients. Videos can be in .mp4, .mov, or WebM format.
+Client testimonial videos display in the testimonials carousel on the homepage. Videos are formatted as:
+- Format: MP4, MOV, or WebM
+- Maximum size: 50MB recommended
+- Aspect ratio: 16:9 (landscape)
 
 ```typescript
 {
   id: 'testimonial-1',
-  clientName: 'Sarah Johnson',
-  clientRole: 'Brand Owner',
-  content: 'The photos were amazing!',
-  videoUrl: 'https://res.cloudinary.com/YOUR_CLOUD_NAME/video/upload/v1234567890/testimonial-sarah.mp4',
-  imageUrl: 'https://res.cloudinary.com/YOUR_CLOUD_NAME/image/upload/v1234567890/sarah-photo.jpg',  // Client photo
+  clientName: 'Client Name',
+  clientRole: 'Session Type',
+  content: 'Their testimonial quote',
+  videoUrl: 'https://res.cloudinary.com/dq4tkpuu4/video/upload/v1773351713/FILENAME.mov',
+  imageUrl: 'https://via.placeholder.com/100x100',
 }
 ```
 
-#### Blog Post Featured Images (Optional)
-**File:** `lib/blog-data.ts`
+#### Background Images
+**Services & Testimonials sections** use this blurred background:
+`https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348310/35-2W1A0773__2_jjv1ug.jpg`
 
-You can add featured image URLs to blog posts:
-```typescript
-{
-  id: 'post-1',
-  title: 'Photography Tips',
-  // ... other fields
-  featuredImage: 'https://res.cloudinary.com/YOUR_CLOUD_NAME/image/upload/v1234567890/blog-featured.jpg',
-}
-```
+To change it, edit:
+- `components/services-section.tsx` (line 40)
+- `components/testimonials-section.tsx` (line 27)
 
-Then display it in `app/blog/[slug]/page.tsx` if desired.
+#### Hero Section Image
+**File:** `components/hero-section.tsx`
 
-### Formspree Contact Form Setup
-
-The contact form is integrated with Formspree for form submissions:
-
-1. **Sign up at** [formspree.io](https://formspree.io)
-
-2. **Create a new form** in Formspree dashboard
-
-3. **Copy your Form ID** (format: `f/xxxxxxxxxxxx`)
-
-4. **Update the form endpoint:**
-   - Edit `components/contact-form.tsx`
-   - Replace `YOUR_FORM_ID` in this line:
-     ```typescript
-     const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-     ```
-
-5. **Test the form** by submitting a message
-
-### Instagram Handle Setup
-
-Replace the placeholder Instagram handle in multiple places with your actual handle:
-
-**Search for:** `https://instagram.com/your_handle` and `@your_handle`
-
-**Update in:**
-1. **Hero Section** (`components/hero-section.tsx`) - "Book Now on Instagram" button
-2. **Footer** (`components/footer.tsx`) - Instagram link in footer
-3. **Header** (`components/header.tsx`) - If you add Instagram to navigation
-
-Example change:
+Update the background image URL (line 32):
 ```tsx
-// Before:
-href="https://instagram.com/your_handle"
-
-// After:
-href="https://instagram.com/your_actual_instagram_handle"
+backgroundImage: 'url(https://res.cloudinary.com/dq4tkpuu4/image/upload/FILENAME)',
 ```
 
-## Content Updates
+### Content Configuration
 
-### Portfolio Images
-
-To add or update portfolio images:
-
-1. **Upload images to Cloudinary:**
-   - Go to Cloudinary dashboard
-   - Upload your image
-   - Copy the public URL
-
-2. **Update `lib/portfolio-data.ts`:**
-   ```typescript
-   {
-     id: 'unique-id',
-     cloudinaryUrl: 'https://res.cloudinary.com/.../your-image.jpg',
-     category: 'lifestyle' | 'studio',
-     title: 'Your Image Title',
-     description: 'Optional description',
-     width: 300,  // Image width in pixels
-     height: 400, // Image height in pixels
-   }
-   ```
-
-   **Important:** Provide accurate width/height for the masonry layout to work properly.
-
-### Services
-
+#### Services/Packages
 **File:** `lib/services-data.ts`
 
-Services are organized by category (Lifestyle and Studio) with duration and pricing. The homepage displays all services with a filter button to toggle between categories.
-
+Update your service offerings:
 ```typescript
 {
   id: 'lifestyle-basic',
   category: 'lifestyle',  // or 'studio'
-  name: 'Basic Lifestyle Shoot',
+  name: 'Service Name',
   duration: '30 min',
-  price: 70,  // Numeric price - will display as $70
-  features: [
-    '30 minute session',
-    'Natural settings',
-    'Digital delivery',
-    'Edited photos',
-  ],
+  price: 70,
+  features: ['Feature 1', 'Feature 2'],
 }
 ```
 
-**Current services included:**
-- **Lifestyle:** Basic ($70/30min), Deluxe ($150/1hr), Premium ($200/1.5hr)
-- **Studio:** Basic ($170/1hr), Deluxe ($220/1.5hr), Premium ($300/2hr)
+#### Blog Posts
+**File:** `lib/blog-data.ts`
 
-You can edit these directly in the data file and add new service packages as needed.
-
-### Testimonials
-
-Update testimonials in `lib/testimonials-data.ts`:
-
+Create new blog posts for photography tips and insights:
 ```typescript
 {
-  id: 'unique-id',
-  clientName: 'Client Name',
-  clientRole: 'Their role/title',
-  content: 'What they said about your work',
-  videoUrl: 'Cloudinary video URL (optional)',
-  imageUrl: 'Client photo URL (optional)',
+  id: 'post-slug',
+  slug: 'post-slug',
+  title: 'Blog Post Title',
+  excerpt: 'Short preview text',
+  content: 'Full HTML or markdown content',
+  author: 'Your Name',
+  category: 'Tips',
+  publishedDate: '2026-03-12',
+  readTime: 5,
 }
 ```
 
-### Blog Posts
+#### FAQ Items
+**File:** `lib/faq-data.ts`
 
-Update blog posts in `lib/blog-data.ts`:
-
+Add frequently asked questions:
 ```typescript
 {
-  id: 'unique-id',
-  title: 'Post Title',
-  excerpt: 'Short summary for preview',
-  content: 'Full post content (paragraphs separated by double line breaks)',
-  author: 'Author Name',
-  publishedDate: 'YYYY-MM-DD',
-  readTime: 5, // estimated minutes
-  category: 'Techniques',
-  slug: 'url-friendly-slug',
-}
-```
-
-Blog posts are automatically available at `/blog` (listing) and `/blog/[slug]` (individual post).
-
-### FAQ Items
-
-Update FAQ items in `lib/faq-data.ts`:
-
-```typescript
-{
-  id: 'unique-id',
+  id: 'faq-1',
   question: 'Your question?',
-  answer: 'Detailed answer to the question',
-  category: 'Category Name', // Groups FAQ items by category
+  answer: 'Detailed answer here',
+  category: 'Booking',  // or 'Policies', 'Timeline', 'Technical'
 }
 ```
 
-## Site Structure
+### Instagram Handle & Links
+Update your Instagram handle in:
+1. `components/hero-section.tsx` - "Book Now on Instagram" button
+2. `components/footer.tsx` - Footer social links
+3. Replace `https://instagram.com/your_handle` with your actual profile
 
-```
-app/
-├── page.tsx                 # Homepage
-├── portfolio/
-│   └── page.tsx            # Portfolio gallery page
-├── blog/
-│   ├── page.tsx            # Blog listing page
-│   └── [slug]/page.tsx      # Individual blog post
-├── faq/
-│   └── page.tsx            # FAQ page
-└── layout.tsx              # Root layout
+Search for `your_handle` in the codebase to find all locations.
 
-components/
-├── header.tsx              # Navigation header
-├── footer.tsx              # Footer with links
-├── hero-section.tsx        # Homepage hero
-├── services-section.tsx    # Services showcase
-├── testimonials-section.tsx # Testimonial carousel
-├── contact-form.tsx        # Contact form
-├── masonry-gallery.tsx     # Portfolio gallery component
-├── blog-post-card.tsx      # Blog post preview card
-└── faq-accordion.tsx       # FAQ accordion component
+### Email Setup (Contact Form)
+The contact form uses Formspree for email delivery.
 
-lib/
-├── portfolio-data.ts       # Portfolio images
-├── services-data.ts        # Services list
-├── testimonials-data.ts    # Client testimonials
-├── blog-data.ts           # Blog posts
-└── faq-data.ts            # FAQ items
-```
+1. **Get Form ID:**
+   - Go to [formspree.io](https://formspree.io)
+   - Create new form or use existing
+   - Copy your Form ID
 
-## Features
-
-### Dark/Light Theme Toggle
-- **System Preference Detection** - automatically uses your device's theme preference
-- **Manual Toggle** - click the sun/moon icon in the header to switch themes
-- **Smooth Transitions** - all colors transition smoothly between light and dark modes
-- **Fully Styled** - entire site is optimized for both themes
-
-### Animations & Motion
-- **Smooth Page Transitions** - elements animate in when you scroll
-- **Button Interactions** - hover and click animations for all interactive elements
-- **Gallery Effects** - images scale smoothly on hover, smooth filter transitions
-- **Modal Animations** - lightbox and modals fade in/out with scale effects
-- **Built with Framer Motion** - professional animation library for performant effects
-
-### Portfolio Gallery
-- **Masonry Layout** (Pinterest-style) - images arrange automatically based on aspect ratio
-- **Category Filtering** - toggle between "All Work", "Lifestyle", and "Studio"
-- **Lightbox Modal** - click any image to view full-size with details
-- **Responsive** - adapts from 1 column (mobile) to 4 columns (desktop)
-
-### Blog
-- **Blog Listing** - grid view of all posts
-- **Individual Posts** - full-text articles with metadata
-- **Read Time Estimation** - shows estimated time to read
-- **Categories** - organize posts by topic
-
-### FAQ
-- **Accordion Interface** - click to expand/collapse answers
-- **Grouped by Category** - FAQs organized by topic (Booking, Policies, etc.)
-- **Smooth Animations** - professional interaction experience
-
-### Contact Form
-- **Formspree Integration** - form submissions go directly to your email
-- **Validation** - required fields are enforced
-- **Success Message** - confirms form submission
-- **Responsive** - works on all device sizes
-
-## Future Enhancement Ideas
-
-These features could be added later if needed:
-
-### Admin Dashboard
-- Login system for managing content
-- Upload images directly from the site
-- Edit blog posts in a visual editor
-- Manage testimonials without code
-
-### Database Integration
-- Store testimonials, services, and FAQs in a database
-- Manage images via admin panel
-- Publish blog posts without code changes
-- Track contact form submissions
-
-### Booking System
-- Calendar integration for scheduling
-- Automated booking confirmations
-- Client payment processing via Stripe
-- Session questionnaire form
-
-### Newsletter
-- Email collection on homepage
-- Automated email campaigns
-- Subscriber management
-
-### Analytics
-- Track visitor behavior
-- See most popular portfolio images
-- Monitor blog post views
-- Contact form analytics
-
-### Advanced Gallery Features
-- Image upload with CloudinaryWidget
-- Advanced filtering and search
-- Social sharing for portfolio items
-- Client password-protected galleries
-
-### Social Media Integration
-- Instagram feed integration
-- Live Instagram posts
-- Social sharing buttons
-- TikTok embed support
-
-### Video Content
-- Hero video background
-- Video blog posts
-- Process/behind-the-scenes videos
-- Tutorial videos
-
-### E-commerce
-- Print products shop
-- Digital download store
-- Session package purchasing
-
-### SEO Enhancements
-- Blog sitemap generation
-- Meta tags optimization
-- Open Graph images
-- Schema markup for rich snippets
-
-## Styling & Customization
-
-The site uses Tailwind CSS v4 with built-in dark mode support. To customize:
-
-### Colors & Theme
-1. **Edit `app/globals.css`** - CSS custom properties and theme variables
-2. Light mode: whites and light grays
-3. Dark mode: dark grays and blacks (automatically applies when user toggles or device prefers dark mode)
-4. All components use semantic dark: classes for proper dark mode support
-
-### Typography
-1. **Edit `app/layout.tsx`** - Change fonts via Google Fonts
-2. Current: Geist (sans-serif) for all text
-3. Update the Geist import and font-sans class to use different fonts
-
-### Tailwind Configuration
-1. **Edit `tailwind.config.ts`** - For advanced customization
-2. Spacing, breakpoints, and other design tokens
-
-Current design uses:
-- **Colors:** Neutral grays with white and charcoal (light), with dark variants
-- **Typography:** Geist (sans-serif) for all text
-- **Layout:** Responsive flexbox with Tailwind classes
-- **Theme:** Next-themes for dark/light mode switching
+2. **Update Contact Form:**
+   - Edit `components/contact-form.tsx`
+   - Replace `YOUR_FORM_ID` with your actual ID (line 75)
 
 ## Performance Optimization
 
-- Next.js Image Optimization for Cloudinary images
-- CSS Grid masonry for efficient gallery rendering
-- Lazy loading for images
-- Code splitting for better load times
-- Static site generation for fast page loads
+### Image Caching
+Images are cached for **365 days** (1 year) to ensure fast repeat visits:
 
-## Browser Support
+```javascript
+// Configured in next.config.mjs
+images: {
+  minimumCacheTTL: 31536000,  // 1 year in seconds
+  formats: ['image/avif', 'image/webp'],
+}
+```
 
-- Chrome/Edge (latest)
-- Firefox (latest)
-- Safari (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
+Cloudinary images automatically receive:
+- WebP/AVIF format conversion for modern browsers
+- Responsive image sizes via srcSet
+- Lazy loading on scroll
+
+### What's Cached
+- ✅ Cloudinary images (portfolio, testimonial backgrounds)
+- ✅ Static assets (logos, icons, fonts)
+- ✅ Next.js optimized images
+- ✅ CSS and JavaScript bundles
+
+## Recent Fixes (v1.2)
+
+- ✅ Fixed background images visibility (removed conflicting solid color, added proper overlay)
+- ✅ Fixed testimonial video sizing (aspect-video with max-width)
+- ✅ Fixed gallery filtering - content now displays correctly when switching categories
+- ✅ Fixed services filtering - animation properly handles category changes
+- ✅ Updated branding to "KCAPTURED" throughout site
+- ✅ Added comprehensive metadata for SEO
+- ✅ Generated sitemap and robots.txt
+- ✅ Implemented image caching strategy
+- ✅ Gallery image labels hidden from display
+- ✅ Videos properly constrained in testimonials carousel
+
+## File Structure
+
+```
+/app
+  /layout.tsx           - Root layout with metadata
+  /page.tsx             - Homepage
+  /sitemap.ts           - XML sitemap generation
+  /robots.ts            - Robots.txt configuration
+  /portfolio
+    /page.tsx           - Portfolio gallery page
+  /blog
+    /page.tsx           - Blog listing
+    /[slug]/page.tsx    - Individual blog post
+  /faq
+    /page.tsx           - FAQ page
+  /globals.css          - Global styles
+
+/components
+  /header.tsx           - Navigation header with logo
+  /hero-section.tsx     - Homepage hero
+  /services-section.tsx - Services with blurred background
+  /testimonials-section.tsx - Video testimonials carousel
+  /masonry-gallery.tsx  - Pinterest-style gallery
+  /blog-post-card.tsx   - Blog preview card
+  /faq-accordion.tsx    - FAQ accordion
+  /contact-form.tsx     - Formspree contact form
+  /footer.tsx           - Site footer
+  /theme-toggle.tsx     - Dark/light mode toggle
+
+/lib
+  /portfolio-data.ts    - Portfolio images (add your images here)
+  /services-data.ts     - Service packages
+  /testimonials-data.ts - Client testimonials (add videos here)
+  /blog-data.ts         - Blog posts
+  /faq-data.ts          - FAQ items
+
+/public
+  /images/
+    /logo.png           - Add your logo here
+  /favicon.ico          - Browser tab icon
+  /apple-icon.png       - Apple device icon
+  /og-image.png         - Social media share image
+```
 
 ## Deployment
 
-The site is ready to deploy to Vercel:
+### Deploy to Vercel (Recommended)
 
 1. **Push to GitHub:**
    ```bash
-   git init
    git add .
-   git commit -m "Initial commit"
-   git remote add origin https://github.com/YOUR_USERNAME/portfolio.git
+   git commit -m "Update portfolio content"
    git push origin main
    ```
 
-2. **Deploy to Vercel:**
+2. **Deploy:**
    - Go to [vercel.com](https://vercel.com)
-   - Click "New Project"
-   - Select your GitHub repository
-   - Click "Deploy"
+   - Import GitHub repository
+   - Deploy with one click
+   - Environment variables auto-configured
 
-3. **Set up custom domain:**
-   - In Vercel dashboard, go to Settings → Domains
-   - Add your custom domain
+3. **Custom Domain:**
+   - Add domain in Vercel project settings
+   - DNS configured automatically
+
+### Environment Variables
+
+For production, set these in Vercel:
+```
+NEXT_PUBLIC_BASE_URL=https://kcaptured.com
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=dq4tkpuu4
+```
 
 ## Troubleshooting
 
-### Images not showing
-- Check that Cloudinary URLs are correct
-- Verify image width/height values in `portfolio-data.ts`
-- Check browser console for CORS errors
+### Gallery filtering not showing content
+- Ensure `AnimatePresence` mode is set to `popLayout` in masonry-gallery.tsx
+- Check browser console for animation errors
 
-### Contact form not working
-- Verify Formspree Form ID is correct
-- Check that it matches the `fetch` URL in `contact-form.tsx`
+### Videos not playing
+- Verify video URLs are correct in testimonials-data.ts
+- Check video format is supported (MP4, MOV, WebM)
+- Ensure videos are under 50MB
+
+### Images not loading
+- Verify Cloudinary URLs are correct
+- Check image exists in your Cloudinary account
+- Verify image width/height in portfolio-data.ts
+
+### Contact form not sending emails
+- Verify Formspree Form ID in contact-form.tsx
+- Check email configuration in Formspree dashboard
 - Test form submission in browser console
 
-### Blog posts not appearing
-- Check that `slug` field matches the URL path
-- Verify `publishedDate` is in `YYYY-MM-DD` format
-- Check that post ID is unique
+## Support & Updates
 
-### Gallery filtering not working
-- Ensure all portfolio items have valid `category` values
-- Category must be either `'lifestyle'` or `'studio'`
+For issues or updates:
+1. Check documentation files (README.md, UPDATES.md, CLOUDINARY_SETUP.md)
+2. Review Vercel deployment logs
+3. Test in browser DevTools console
+4. Check Cloudinary media library for image/video status
 
-## Complete Media Setup Guide
+## Technology Stack
 
-### Step-by-Step: Adding Your Portfolio Images
-
-1. **Prepare Your Images**
-   - Use high-quality originals (at least 2000px wide)
-   - Supported formats: JPG, PNG, WebP
-   - Landscape and portrait orientations work great with masonry
-
-2. **Upload to Cloudinary**
-   - Go to [cloudinary.com/console](https://cloudinary.com/console)
-   - Click "Media Library" 
-   - Create a folder called "portfolio" for organization
-   - Upload your images (drag and drop works!)
-   - Cloudinary will show the public URL after upload
-
-3. **Get the Image Details**
-   - Note the image filename (you'll see it in the URL)
-   - Right-click the image → View Image → Copy the URL
-   - Open your image in a new tab, right-click → Inspect (get width/height)
-
-4. **Add to Your Portfolio**
-   - Edit `lib/portfolio-data.ts`
-   - Add or update entries with your Cloudinary URLs
-   - Include accurate width/height from step 3
-   - Use unique IDs like `'lifestyle-sunset-1'`
-
-5. **Categorize Correctly**
-   - Use `category: 'lifestyle'` for lifestyle/natural setting photos
-   - Use `category: 'studio'` for studio/controlled environment photos
-   - The homepage filter lets viewers switch between them
-
-### Step-by-Step: Adding Testimonial Videos
-
-1. **Prepare Your Videos**
-   - Duration: 30 seconds to 2 minutes works best
-   - Format: MP4 or MOV
-   - Resolution: 1080p recommended
-   - File size: Keep under 50MB for fast loading
-
-2. **Upload to Cloudinary**
-   - In Cloudinary Media Library, click "Upload"
-   - Select your video file
-   - It will process and show a URL
-
-3. **Add to Testimonials**
-   - Edit `lib/testimonials-data.ts`
-   - Add the video URL to the `videoUrl` field
-   - Optionally add a client photo URL to `imageUrl`
-
-### Hero Section Background Image (Optional)
-
-To add a hero background image:
-
-1. Upload a wide image to Cloudinary (minimum 1920px wide)
-2. Edit `components/hero-section.tsx`
-3. Add this to the section tag:
-   ```tsx
-   style={{backgroundImage: 'url(YOUR_CLOUDINARY_URL)', backgroundSize: 'cover', backgroundPosition: 'center'}}
-   ```
-
-### File Size Optimization Tips
-
-For best performance with large image libraries:
-
-1. **Optimize images before uploading to Cloudinary:**
-   - Use tools like ImageOptim or TinyPNG
-   - Compression shouldn't noticeably reduce quality
-
-2. **Use Cloudinary's image transformation:**
-   - Add URL parameters for resizing on-the-fly
-   - Example: `https://res.cloudinary.com/your-cloud/image/upload/w_800,h_1000,c_fill/image.jpg`
-   - This saves bandwidth by serving optimized sizes
-
-3. **Lazy load images in gallery:**
-   - The masonry gallery already lazy loads
-   - Images below the fold load only when needed
-
-### Cloudinary Pro Tips
-
-- **Organize with folders** - Create a "portfolio", "testimonials", "blog" structure
-- **Use descriptive names** - `sunset-portrait-session.jpg` is better than `IMG_001.jpg`
-- **Transformations** - Cloudinary can auto-crop, enhance, and filter images via URL params
-- **Responsive images** - The gallery detects screen size and loads appropriately
-- **Video delivery** - Cloudinary handles video streaming optimization automatically
-
-## Support & Questions
-
-For questions about:
-- **Cloudinary setup:** See [Cloudinary docs](https://cloudinary.com/documentation)
-- **Formspree setup:** See [Formspree docs](https://formspree.io/help)
-- **Next.js/React:** See [Next.js docs](https://nextjs.org/docs)
-- **Tailwind CSS:** See [Tailwind docs](https://tailwindcss.com/docs)
+- **Framework:** Next.js 15
+- **React:** React 19.2
+- **Styling:** Tailwind CSS v4
+- **Animations:** Framer Motion 11
+- **Icons:** Lucide React
+- **Media:** Cloudinary (CDN)
+- **Email:** Formspree
+- **Analytics:** Vercel Analytics
+- **Deployment:** Vercel
 
 ## License
 
-Feel free to use this template for your photography business.
-
----
-
-**Ready to go live?** Make sure to:
-1. ✅ Add your Cloudinary Cloud Name and upload portfolio images to `lib/portfolio-data.ts`
-2. ✅ Add testimonial videos to `lib/testimonials-data.ts` with your Cloudinary video URLs
-3. ✅ Update Instagram handle in `components/hero-section.tsx`, `components/footer.tsx`, and anywhere else
-4. ✅ Set up Formspree Form ID in `components/contact-form.tsx`
-5. ✅ Update site title and meta description in `app/layout.tsx`
-6. ✅ Test dark/light theme toggle (click sun/moon icon in header)
-7. ✅ Review animations by scrolling through pages
-8. ✅ Deploy to Vercel
-
-### What's Included
-- ✨ **Dark/Light Mode** - Automatic system detection with manual toggle
-- 🎬 **Smooth Animations** - Framer Motion animations throughout
-- 🖼️ **Pinterest-Style Gallery** - Masonry layout with filtering
-- 📱 **Fully Responsive** - Mobile, tablet, and desktop optimized
-- 🎨 **Beautiful Design** - Professional styling with Tailwind CSS
-- 📝 **Blog System** - Blog listing and individual post pages
-- ❓ **FAQ Section** - Accordion-style Q&A
-- 📧 **Contact Form** - Formspree email integration
-
-Your professional photography portfolio is ready to showcase your best work!
+Professional photography portfolio template. All photos are your own intellectual property.
