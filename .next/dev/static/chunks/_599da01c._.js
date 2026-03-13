@@ -432,7 +432,7 @@ const portfolioImages = [
     // STUDIO IMAGES
     {
         id: 'studio-1',
-        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348278/8-2W1A1201__2_xnxm8w.jpg',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348204/39-1Z7A6350_n9qbe8.jpg',
         category: 'studio',
         title: 'Studio Headshot',
         width: 400,
@@ -440,7 +440,7 @@ const portfolioImages = [
     },
     {
         id: 'studio-2',
-        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348276/7-2W1A1195__2_e2vfwi.jpg',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348203/8-2W1A1149-2__2_ty7f37.jpg',
         category: 'studio',
         title: 'Professional Portrait',
         width: 400,
@@ -448,7 +448,7 @@ const portfolioImages = [
     },
     {
         id: 'studio-3',
-        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348275/6-2W1A1161__2_aqj2ss.jpg',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348202/7-2W1A1138__2_d6sg4l.jpg',
         category: 'studio',
         title: 'Studio Session',
         width: 400,
@@ -456,7 +456,7 @@ const portfolioImages = [
     },
     {
         id: 'studio-4',
-        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348273/5-2W1A1111__2_hq01c0.jpg',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348202/15-2W1A5620__2_zscsjf.jpg',
         category: 'studio',
         title: 'Professional Lighting',
         width: 400,
@@ -464,7 +464,7 @@ const portfolioImages = [
     },
     {
         id: 'studio-5',
-        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348269/4-2W1A0970__2_gsmxhk.jpg',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348201/6-2W1A1022__2_djsdbh.jpg',
         category: 'studio',
         title: 'Clean Studio Shot',
         width: 400,
@@ -472,7 +472,7 @@ const portfolioImages = [
     },
     {
         id: 'studio-6',
-        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348267/3-2W1A0937__2_oqwnpr.jpg',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348199/4-2W1A8443__2_rtf6fy.jpg',
         category: 'studio',
         title: 'Studio Portrait',
         width: 400,
@@ -480,7 +480,7 @@ const portfolioImages = [
     },
     {
         id: 'studio-7',
-        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348265/2-2W1A0854__2_yvajef.jpg',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348199/5-2W1A0035__2_ixsgbd.jpg',
         category: 'studio',
         title: 'Professional Headshot',
         width: 400,
@@ -488,7 +488,23 @@ const portfolioImages = [
     },
     {
         id: 'studio-8',
-        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348262/1-2W1A0805__2_n2xnti.jpg',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348198/3-leo_szn_ldgogq.jpg',
+        category: 'studio',
+        title: 'Studio Excellence',
+        width: 400,
+        height: 500
+    },
+    {
+        id: 'studio-9',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348197/2-mag_vea5kt.jpg',
+        category: 'studio',
+        title: 'Studio Excellence',
+        width: 400,
+        height: 500
+    },
+    {
+        id: 'studio-10',
+        cloudinaryUrl: 'https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773347985/1-2W1A5810__2_hibevi.jpg',
         category: 'studio',
         title: 'Studio Excellence',
         width: 400,

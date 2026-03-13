@@ -9,7 +9,7 @@ export const faqItems: FAQItem[] = [
   {
     id: '1',
     question: 'How do I book a photography session?',
-    answer: 'To book a session, simply message us on Instagram (@your_handle) with your preferred date and session type. We\'ll discuss your needs, pricing, and send you a contract. A 50% deposit is required to hold your date.',
+    answer: 'To book a session, simply message us on Instagram @kcaptures._ with your preferred date and session type. We\'ll discuss your needs, pricing, and send you a contract. A 50% deposit is required to hold your date.',
     category: 'Booking',
   },
   {

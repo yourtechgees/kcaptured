@@ -6,12 +6,13 @@ export function Footer() {
 
   return (
     <footer className="bg-black text-white py-12 md:py-16">
+      <div className="border-t border-gray-800 pt-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold mb-2">Studio</h3>
+            <h3 className="text-2xl font-bold mb-2">Kcaptured</h3>
             <p className="text-gray-500 text-sm">
               Professional photography specializing in lifestyle and studio portraits.
             </p>
@@ -44,7 +45,7 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Connect</h4>
             <div className="flex flex-col gap-3">
               <a
-                href="https://instagram.com/your_handle"
+                href="https://www.instagram.com/kcaptures_.1?igsh=MTc2c244bDZqOXRtbA=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-gray-500 hover:text-white transition-colors text-sm"
@@ -64,7 +65,7 @@ export function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-gray-800 pt-8">
+        
           <p className="text-center text-gray-500 text-sm">
             &copy; {currentYear} KCAPTURES. All rights reserved.
           </p>
