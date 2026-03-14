@@ -60,13 +60,18 @@ export function MasonryGallery() {
               className="break-inside-avoid mb-4 cursor-pointer group overflow-hidden rounded-lg"
               onClick={() => setSelectedImage(image)}
             >
-              <div className="relative bg-gray-200 dark:bg-gray-700 overflow-hidden rounded-lg">
-                <img
+              <div
+                className="relative bg-gray-200 dark:bg-gray-700 overflow-hidden rounded-lg"
+                style={{ aspectRatio: image.width / image.height }}
+              >
+                <Image
                   src={optimizeCloudinaryUrl(image.cloudinaryUrl)}
                   alt={image.title}
-                  width={image.width}
-                  height={image.height}
-                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  priority={filteredImages.indexOf(image) < 3}
+                  unoptimized
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
               </div>
@@ -106,27 +111,14 @@ export function MasonryGallery() {
               </motion.button>
 
               {/* Image */}
-              <img
+              <Image
                 src={optimizeCloudinaryUrl(selectedImage.cloudinaryUrl)}
                 alt={selectedImage.title}
-                className="w-full h-auto rounded-lg"
+                width={selectedImage.width}
+                height={selectedImage.height}
+                unoptimized
+                className="w-full h-auto max-h-[80vh] max-w-2xl rounded-lg mx-auto"
               />
-
-              {/* Info */}
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                className="mt-4 text-white"
-              >
-                <h3 className="text-2xl font-bold">{selectedImage.title}</h3>
-                {selectedImage.description && (
-                  <p className="text-gray-300 mt-2">{selectedImage.description}</p>
-                )}
-                <p className="text-sm text-gray-400 mt-2 capitalize">
-                  {selectedImage.category}
-                </p>
-              </motion.div>
             </motion.div>
           </motion.div>
         )}

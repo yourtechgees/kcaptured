@@ -36,7 +36,7 @@ export function ServicesSection() {
     <section 
       className="py-16 md:py-24 relative"
       style={{
-        backgroundImage: 'url(https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773348310/35-2W1A0773__2_jjv1ug.jpg)',
+        backgroundImage: 'url(https://res.cloudinary.com/dq4tkpuu4/image/upload/v1773520574/kcompressed_iul9zi.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
